@@ -32,6 +32,6 @@ public class ReviewService implements CommandLineRunner {
         for(Review review : reviews) {
             System.out.println(review);
         }
-        reviewRepository.deleteById(1L);
+        reviewRepository.deleteById(10L);
     }
 }
