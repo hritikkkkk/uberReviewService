@@ -11,11 +11,15 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Review extends BaseModel{
+public class Review extends BaseModel {
     @Column(nullable = false)
     private String content;
 
     private Double rating;
+
+    @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false)
+    private Booking booking; // we have defined a 1:1 relationship between booking and review
 
     @Override
     public String toString() {
