@@ -18,12 +18,16 @@ public class ReviewServiceImpl implements ReviewService {
     public Review publishReview(ReviewRequestDTO requestDTO) {
         Booking booking = bookingService.findBookingById(requestDTO.getBookingId());
 
+        if (reviewRepository.existsByBooking(booking)) {
+            throw new IllegalArgumentException("Booking already has a review");
+        }
+
         Review review = Review.builder()
                 .booking(booking)
                 .content(requestDTO.getContent())
                 .rating(requestDTO.getRating())
                 .build();
 
-       return reviewRepository.save(review);
+        return reviewRepository.save(review);
     }
 }
