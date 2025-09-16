@@ -18,7 +18,7 @@ public class Review extends BaseModel {
     private Double rating;
 
     @OneToOne(cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
-    @JoinColumn(nullable = false, unique = true)
+    @JoinColumn(name = "booking_id",nullable = false, unique = true)
     private Booking booking; // we have defined a 1:1 relationship between booking and review
 
     @Override
