@@ -12,6 +12,7 @@ public class ReviewAdapter implements ReviewMapper {
                 .id(review.getId())
                 .rating(review.getRating())
                 .content(review.getContent())
+                .bookingId(review.getBooking().getId())
                 .build();
     }
 }

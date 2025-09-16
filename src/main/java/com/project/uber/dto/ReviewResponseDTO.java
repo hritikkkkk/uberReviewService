@@ -11,4 +11,5 @@ public class ReviewResponseDTO {
     private Long id;
     private Double rating;
     private String content;
+    private Long bookingId;
 }

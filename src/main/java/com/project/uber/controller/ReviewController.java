@@ -21,9 +21,14 @@ public class ReviewController {
     private final ReviewAdapter reviewAdapter;
 
     @PostMapping
-    public ResponseEntity<ReviewResponseDTO> publishReview(@RequestBody ReviewRequestDTO requestDTO) {
+    public ResponseEntity<ReviewResponseDTO> publishReview(
+            @Valid @RequestBody ReviewRequestDTO requestDTO) {
+
         Review savedReview = reviewService.publishReview(requestDTO);
-        return ResponseEntity.ok(reviewAdapter.toResponseDto(savedReview));
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(reviewAdapter.toResponseDto(savedReview));
     }
 
 
