@@ -1,8 +1,8 @@
 package com.project.uber.services;
 
 import com.project.uber.dto.ReviewRequestDTO;
-import com.project.uber.model.Booking;
-import com.project.uber.model.Review;
+import com.hritik.entity_service.model.Booking;
+import com.hritik.entity_service.model.Review;
 import com.project.uber.repositories.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

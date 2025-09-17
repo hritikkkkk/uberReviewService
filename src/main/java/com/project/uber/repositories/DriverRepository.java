@@ -1,6 +1,7 @@
 package com.project.uber.repositories;
 
-import com.project.uber.model.Driver;
+
+import com.hritik.entity_service.model.Driver;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

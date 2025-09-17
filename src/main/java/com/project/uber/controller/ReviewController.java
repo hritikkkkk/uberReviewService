@@ -1,9 +1,9 @@
 package com.project.uber.controller;
 
+import com.hritik.entity_service.model.Review;
 import com.project.uber.adapter.ReviewAdapter;
 import com.project.uber.dto.ReviewRequestDTO;
 import com.project.uber.dto.ReviewResponseDTO;
-import com.project.uber.model.Review;
 import com.project.uber.services.ReviewService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

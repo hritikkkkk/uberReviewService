@@ -1,7 +1,6 @@
 package com.project.uber.dto;
 
 
-import com.project.uber.model.Booking;
 import lombok.Builder;
 import lombok.Data;
 

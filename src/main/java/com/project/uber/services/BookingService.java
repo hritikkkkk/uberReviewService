@@ -1,7 +1,7 @@
 package com.project.uber.services;
 
+import com.hritik.entity_service.model.Booking;
 import com.project.uber.exception.ResourceNotFoundException;
-import com.project.uber.model.Booking;
 import com.project.uber.repositories.BookingRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;

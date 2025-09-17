@@ -1,7 +1,7 @@
 package com.project.uber.services;
 
 import com.project.uber.dto.ReviewRequestDTO;
-import com.project.uber.model.Review;
+import com.hritik.entity_service.model.Review;
 import org.springframework.stereotype.Service;
 
 
